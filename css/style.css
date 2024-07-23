@@ -8695,7 +8695,7 @@ header .left-nav .navbar-nav:before {
   transition: 0.3s;
 }
 header .disable-fixed {
-  /*position: absolute;*/
+  position: absolute;
 }
 header.sticky .responsive-sticky {
   -webkit-transform: translateY(0);

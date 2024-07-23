@@ -2381,7 +2381,7 @@
         // Header sticky
         if (scrollPos > (headerHeight + 150)) {
             setTimeout(function () {
-                $('header').addClass('sticky-active');
+                // $('header').addClass('sticky-active');
             }, headerTransition); // Header transition effect time
         }
         if (scrollPos < headerHeight) {
