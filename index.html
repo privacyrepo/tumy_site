@@ -1,0 +1,861 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Tumy - LGBTQ+ Community Pregnancy Social Platform</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Tumy.app">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description"
+        content="Tumy - A safe and supportive platform for LGBTQ+ individuals and families navigating pregnancy.">
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="demos/seo-agency/seo-agency.css" />
+    <style>
+            /* Add styles for a loading overlay */
+    #loading-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    /* Add styles for the success popup */
+    #success-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 10000;
+    }
+        footer .footer-logo img {
+            max-height: 100px !important;
+        }
+
+        .btn.btn-switch-text.btn-medium>span {
+            padding: 16px 15px;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .navbar .navbar-nav .nav-link {
+
+            padding: 10px 14px;
+
+        }
+
+        .headers {
+            position: sticky;
+            top: 0px;
+            background: white;
+            z-index: 160;
+        }
+
+        /* header .navbar-brand img {
+            height: 100px !important;
+            width: 130px !important;
+        } */
+
+        header .navbar-brand {
+            margin-right: 0;
+            vertical-align: middle;
+            padding: 10px 0 !important;
+            display: inline-block;
+            font-size: 0;
+        }
+
+        header .navbar-brand img {
+            max-height: 60px !important;
+        }
+    </style>
+</head>
+
+<body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2a2b3f" class="custom-cursor">
+    <!-- start cursor -->
+    <div class="cursor-page-inner">
+        <div class="circle-cursor circle-cursor-inner"></div>
+        <div class="circle-cursor circle-cursor-outer"></div>
+    </div>
+    <!-- end cursor -->
+    <!-- start header -->
+    <header class="headers">
+
+        <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+            <div class="container-fluid" bis_skin_checked="1">
+                <div class="col-auto col-xl-2 col-lg-2 me-lg-0 me-auto" bis_skin_checked="1">
+                    <a class="navbar-brand" href="demo-corporate.html" previewlistener="true">
+                        <img src="images/tumy-logo.png" data-at2x="images/tumy-logo.png" alt="" class="default-logo"
+                            width="200" height="150">
+                        <img src="images/tumy-logo.png" data-at2x="images/tumy-logo.png" alt="" class="alt-logo"
+                            width="0" height="0">
+                        <img src="images/tumy-logo.png" data-at2x="images/tumy-logo.png" alt="" class="mobile-logo"
+                            width="0" height="0">
+                    </a>
+                </div>
+                <div class="col-auto col-xl-8 col-lg-8 menu-order position-static" bis_skin_checked="1">
+                    <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="#navbarNav-clone" aria-label="Toggle navigation"
+                        data-target="#navbarNav-clone">
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav" bis_skin_checked="1">
+                        <!-- <ul class="navbar-nav">
+                          
+
+                            <li class="nav-item"><a href="#contactSection" class="nav-link"
+                                    previewlistener="true">Contact
+                                </a></li>
+                        </ul> -->
+                    </div>
+                </div>
+                <div class="col-auto col-xl-2 col-lg-2 text-end md-pe-0 d-none" bis_skin_checked="1">
+                    <div class="header-icon" bis_skin_checked="1">
+                        <div class="header-search-icon icon" bis_skin_checked="1">
+                            <a href="#" class="search-form-icon header-search-form"><i
+                                    class="feather icon-feather-search"></i></a>
+
+                            <div class="search-form-wrapper" bis_skin_checked="1">
+                                <button title="Close" type="button" class="search-close">×</button>
+                                <form id="search-form" role="search" method="get" class="search-form text-left d-none"
+                                    action="search-result.html" style="display: none">
+                                    <div class="search-form-box" bis_skin_checked="1">
+                                        <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-1px">What are you
+                                            looking for?</h2>
+                                        <input class="search-input" id="search-form-input5e219ef164995"
+                                            placeholder="Enter your keywords..." name="s" value="" type="text"
+                                            autocomplete="off">
+                                        <button type="submit" class="search-button d-none">
+                                            <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="header-button ms-20px d-none d-xl-inline-block" bis_skin_checked="1">
+                            <a href="demo-corporate-contact.html"
+                                class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none d-none"
+                                previewlistener="true">
+                                <span>
+                                    <span class="btn-double-text fw-600" data-text="Free consultation">Free
+                                        consultation</span>
+                                    <span><i class="fa-regular fa-envelope"></i></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- end header -->
+    <!-- start banner slider -->
+    <section class="cover-background position-relative ipad-top-space-margin"
+        style="background-image: url('images/tumy-bg.jpg')">
+        <div class="background-position-left-top h-100 w-100 position-absolute left-0px top-0"
+            style="background-image: url('images/vertical-line-bg-medium-gray.svg')"></div>
+        <div class="background-position-center-bottom background-size-100 background-no-repeat position-absolute bottom-0 left-0px w-100 h-400px lg-h-170px z-index-1"
+            style="background-image: url('images/tumy-bottom-bg.png')"></div>
+        <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true"
+            data-particle-options='{"particles": {"number": {"value": 1.1,"density": {"enable": true,"value_area": 900}},"shape": {"type": ["image"],"image":{"src":"images/particles-demo-4-bg.png","width":180,"height":100}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 120,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":0.4,"width":1},"move": {"enable": true,"speed":1,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'>
+        </div>
+        <div class="container position-relative pb-2">
+            <div class="row align-items-center text-center text-md-start justify-content-sm-center">
+                <div class="col-md-6 col-sm-9 position-relative z-index-1 text-dark-gray md-mb-35px">
+                    <div class="alt-font fs-110 md-fs-100 fw-300 lh-85 ls-minus-2px mb-15px fancy-text-style-4"
+                        data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 900, "easing": "easeOutCirc" }'>
+                        <span class="d-inline-block">Supporting</span>
+                        <span class="fw-700 fs-150 md-fs-120 ls-minus-5px d-inline-block"
+                            data-fancy-text='{ "effect": "rubber-band", "string": ["families", "journeys"] }'></span>
+                    </div>
+                    <div
+                        data-anime='{ "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "duration": 900, "delay": 500, "easing": "easeOutCirc" }'>
+                        <span
+                            class="alt-font fs-20 fw-500 w-70 lg-w-85 sm-w-100 mb-40px md-mb-30px d-block opacity-7">We
+                            provide a supportive community and resources for LGBTQ+ individuals navigating
+                            pregnancy.</span>
+                    </div>
+                    <!--    <div class="d-flex">-->
+
+                    <!--    <a href="index.html" class="btn btn-large d-flex align-items-center btn-rounded with-rounded btn-gradient-orange-sky-blue btn-box-shadow box-shadow-extra-large me-2" data-anime='{ "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "duration": 900, "delay": 800, "easing": "easeOutCirc" }'>Join our community<span class="bg-white text-base-color"><i class="fa-solid fa-arrow-right"></i></span></a>-->
+
+                    <!--   <a href="#" class="btn btn-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto" data-anime='{ "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "duration": 900, "delay": 800, "easing": "easeOutCirc" }'>Download/Cta<span class="bg-dark-gray text-white"><i class="fa-solid fa-arrow-right"></i></span></a>-->
+
+                    <!--    </div>-->
+                    <!--</div>-->
+
+                    <!--<div class="d-flex">-->
+                    <h2>Join our community</h2>
+                    <a href="#contactSection"
+                        class="btn btn-extra-large  btn-rounded with-rounded btn-gradient-orange-sky-blue btn-box-shadow box-shadow-extra-large me-2"
+                        data-anime='{ "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "duration": 900, "delay": 800, "easing": "easeOutCirc" }'>Early
+                        Access<span class="bg-white text-base-color"><i class="fa-solid fa-arrow-right"></i></span></a>
+
+                    <!--<a href="#" class="btn btn-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto" data-anime='{ "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "duration": 900, "delay": 800, "easing": "easeOutCirc" }'>Download/Cta<span class="bg-dark-gray text-white"><i class="fa-solid fa-arrow-right"></i></span></a>-->
+
+                </div>
+                <!--</div>-->
+                <div class="col-md-6 text-center"
+                    data-anime='{ "opacity": [0, 1], "translateY": [150, 0], "duration": 2000, "easing": "easeOutBack" }'>
+                    <img src="images/tumy-float.jpg" alt="" class="animation-float">
+                </div>
+            </div>
+            <div class="position-absolute bottom-minus-90px md-bottom-minus-70px sm-bottom-minus-50px right-30px sm-right-10px z-index-9"
+                data-anime='{ "opacity": [0, 1], "scale": [0, 1], "translateZ": [50, 0], "staggervalue": 200, "duration": 900, "delay": 800, "easing": "easeOutCirc" }'>
+                <img src="images/tumy-family.jpg" alt="" class="md-w-180px xs-w-150px">
+            </div>
+        </div>
+    </section>
+    <!-- end banner slider -->
+
+    <!-- start section -->
+    <section class="background-position-center-top pt-4 md-pt-6 sm-pt-40px d-none" id="supportSection"
+        style="background-image: url('images/demo-seo-agency-vertical-line-bg.svg')">
+        <div class="container">
+            <div class="row mb-8 md-mb-10">
+                <div class="col-12">
+                    <div class="row mb-8">
+                        <div class="col-lg-4 col-md-6 sm-ps-15px text-center text-md-start mb-4">
+                            <span
+                                class="ps-20px pe-20px mb-30px md-mb-20px text-uppercase text-dark-gray fs-13 lh-40 md-lh-50 ls-1px alt-font fw-700 border-radius-4px bg-gradient-chablis-red-quartz-white d-inline-block">Community
+                                Support</span>
+                            <h2 class="alt-font text-dark-gray fw-600 ls-minus-1px">Empowering and supporting each
+                                other.</h2>
+                            <p class="w-80 xl-w-90 md-w-100">Join a vibrant community where you can share experiences,
+                                get advice, and build connections with other LGBTQ+ individuals and families.</p>
+                            <a href="community.html"
+                                class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray fw-700">
+                                <span>
+                                    <span class="btn-text">learn more</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 sm-ps-15px text-center text-md-start mb-4">
+                            <span
+                                class="ps-20px pe-20px mb-30px md-mb-20px text-uppercase text-dark-gray fs-13 lh-40 md-lh-50 ls-1px alt-font fw-700 border-radius-4px bg-gradient-chablis-red-quartz-white d-inline-block">Pregnancy
+                                Resources</span>
+                            <h2 class="alt-font text-dark-gray fw-600 ls-minus-1px">Comprehensive guides and support.
+                            </h2>
+                            <p class="w-80 xl-w-90 md-w-100">Access a wealth of resources to help you navigate your
+                                pregnancy journey with confidence and ease.</p>
+                            <a href="resources.html"
+                                class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray fw-700">
+                                <span>
+                                    <span class="btn-text">learn more</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 sm-ps-15px text-center text-md-start mb-4">
+                            <span
+                                class="ps-20px pe-20px mb-30px md-mb-20px text-uppercase text-dark-gray fs-13 lh-40 md-lh-50 ls-1px alt-font fw-700 border-radius-4px bg-gradient-chablis-red-quartz-white d-inline-block">Health
+                                & Wellness</span>
+                            <h2 class="alt-font text-dark-gray fw-600 ls-minus-1px">Wellbeing for you and your family.
+                            </h2>
+                            <p class="w-80 xl-w-90 md-w-100">Discover tips and advice on maintaining physical and mental
+                                health during pregnancy.</p>
+                            <a href="health.html"
+                                class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray fw-700">
+                                <span>
+                                    <span class="btn-text">learn more</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 sm-ps-15px text-center text-md-start mb-4">
+                            <span
+                                class="ps-20px pe-20px mb-30px md-mb-20px text-uppercase text-dark-gray fs-13 lh-40 md-lh-50 ls-1px alt-font fw-700 border-radius-4px bg-gradient-chablis-red-quartz-white d-inline-block">Events
+                                & Workshops</span>
+                            <h2 class="alt-font text-dark-gray fw-600 ls-minus-1px">Connect and learn together.</h2>
+                            <p class="w-80 xl-w-90 md-w-100">Participate in events and workshops designed to provide
+                                support and education for LGBTQ+ families.</p>
+                            <a href="events.html"
+                                class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray fw-700">
+                                <span>
+                                    <span class="btn-text">learn more</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gradient-very-light-gray ps-7 pe-7 xxl-ps-3 xxl-pe-3 xs-px-0">
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-3">
+                <div class="col-xl-5 col-lg-7 col-md-8 text-center"
+                    data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <span
+                        class="fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color">SHARE
+                        YOUR PARENTING EXPERIENCES</span>
+                    <h2 class="alt-font text-dark-gray fw-600 ls-minus-2px">Simple posting – each post has picture and
+                        notes – detailed notes are key.</h2>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-xl-4 row-cols-md-2 row-cols-sm-2 justify-content-center"
+                data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <!-- start interactive banner item -->
+                <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1">
+                    <div class="atropos" data-atropos data-atropos-perspective="1450">
+                        <a href="#supportSection" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner">
+                                    <figure class="m-0 hover-box border-radius-4px overflow-hidden position-relative"
+                                        data-atropos-offset="3">
+                                        <img class="w-100" src="images/follow.png" alt=""
+                                            style="width: 600px; height: 600px" />
+                                        <figcaption
+                                            class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-15 xl-p-12 last-paragraph-no-margin">
+                                            <div
+                                                class="mb-auto bg-base-color fw-500 text-white text-uppercase border-radius-30px ps-20px pe-20px fs-13">
+                                                TAKE OTHER’S PARENTING EXPERIENCES AS REFERENCE</div>
+                                            <span class="alt-font text-white fw-500 fs-26 sm-lh-26 xs-lh-28">Easy
+                                                browsing – browse multiple experiences directly without digging. Tumy is
+                                                committed to providing a space where relevant content is seen.</span>
+                                            <p class="text-white opacity-6 fs-18"></p>
+                                            <div
+                                                class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-9">
+                                            </div>
+                                            <div
+                                                class="box-overlay bg-gradient-gray-light-dark-transparent z-index-minus-1">
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end interactive banner item -->
+                <!-- start interactive banner item -->
+                <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1">
+                    <div class="atropos" data-atropos data-atropos-perspective="1450">
+                        <a href="#supportSection" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner">
+                                    <figure class="m-0 hover-box border-radius-4px overflow-hidden position-relative"
+                                        data-atropos-offset="3">
+                                        <img class="w-100" src="images/Simple.png" alt=""
+                                            style="width: 600px; height: 600px" />
+                                        <figcaption
+                                            class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-15 xl-p-12 last-paragraph-no-margin">
+                                            <div
+                                                class="mb-auto bg-base-color fw-500 text-white text-uppercase border-radius-30px ps-20px pe-20px fs-13">
+                                                CONNECT AND SUPPORT ONE ANOTHER</div>
+                                            <span class="alt-font text-white fw-500 fs-26 sm-lh-26 xs-lh-28">Following
+                                                and saves – users can follow each other and save their favorite
+                                                posts.</span>
+                                            <p class="text-white opacity-6 fs-18"></p>
+                                            <div
+                                                class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-9">
+                                            </div>
+                                            <div
+                                                class="box-overlay bg-gradient-gray-light-dark-transparent z-index-minus-1">
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end interactive banner item -->
+                <!-- start interactive banner item -->
+                <div class="col interactive-banner-style-05 sm-mb-30px position-relative z-index-1">
+                    <div class="atropos" data-atropos data-atropos-perspective="1450">
+                        <a href="#supportSection" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner">
+                                    <figure class="m-0 hover-box border-radius-4px overflow-hidden position-relative"
+                                        data-atropos-offset="3">
+                                        <img class="w-100" src="images/LG.png" alt=""
+                                            style="width: 600px; height: 600px" />
+                                        <figcaption
+                                            class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-15 xl-p-12 last-paragraph-no-margin">
+                                            <div
+                                                class="mb-auto bg-base-color fw-500 text-white text-uppercase border-radius-30px ps-20px pe-20px fs-13">
+                                                LGBTQ+ FRIENDLY SPACE</div>
+                                            <span class="alt-font text-white fw-500 fs-26 sm-lh-26 xs-lh-28">LGBTQ+
+                                                owned platform – one of the co-founders is an aspiring lesbian mom, and
+                                                the team is dedicated to providing a supportive space for LGBTQ+
+                                                families.</span>
+                                            <p class="text-white opacity-6 fs-18"></p>
+                                            <div
+                                                class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-9">
+                                            </div>
+                                            <div
+                                                class="box-overlay bg-gradient-gray-light-dark-transparent z-index-minus-1">
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end interactive banner item -->
+                <!-- start interactive banner item -->
+                <div class="col interactive-banner-style-05 position-relative z-index-1">
+                    <div class="atropos" data-atropos data-atropos-perspective="1450">
+                        <a href="#supportSection" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner">
+                                    <figure class="m-0 hover-box border-radius-4px overflow-hidden position-relative"
+                                        data-atropos-offset="3">
+                                        <img class="w-100" src="images/Easy.png" alt=""
+                                            style="width: 600px; height: 600px" />
+                                        <figcaption
+                                            class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-15 xl-p-12 last-paragraph-no-margin">
+                                            <div
+                                                class="mb-auto bg-base-color fw-500 text-white text-uppercase border-radius-30px ps-20px pe-20px fs-13">
+                                                FREE TO REGISTER AND USE</div>
+                                            <span class="alt-font text-white fw-500 fs-26 sm-lh-26 xs-lh-28">Free to use
+                                                with optional premium features (e.g., organizing events) in future
+                                                versions.</span>
+                                            <p class="text-white opacity-6 fs-18"></p>
+                                            <div
+                                                class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-9">
+                                            </div>
+                                            <div
+                                                class="box-overlay bg-gradient-gray-light-dark-transparent z-index-minus-1">
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end interactive banner item -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- end section -->
+
+
+
+
+
+
+    <!-- start section -->
+    <section class="bg-gradient-top-very-light-gray overlap-height position-relative">
+        <div class="container overlap-gap-section">
+            <div class="row justify-content-center mb-4">
+                <div class="col-xxl-6 col-lg-8 col-md-10 text-center"
+                    data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <h2 class="fw-600 alt-font text-dark-gray ls-minus-1px">Partners</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center row-cols-2 row-cols-md-4 row-cols-sm-3 clients-style-03">
+                <!-- start client item -->
+                <div class="col text-center mb-35px"
+                data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <div class="client-box">
+                    <a href="https://www.lovegrownadoptionconsulting.com/" target="_blank"><img src="images/love-grown.png" alt="Love Grown"
+                            class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                </div>
+            </div>
+            
+                <!-- end client item -->
+                <!-- start client item -->
+                <div class="col text-center mb-35px"
+                    data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 1000, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="client-box">
+                        <a href="#"><img src="images/client-2.png" alt=""
+                                class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                    </div>
+                </div>
+                <!-- end client item -->
+                <!-- start client item -->
+                <div class="col text-center mb-35px"
+                    data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay":900, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="client-box">
+                        <a href="#"><img src="images/client-3.png" alt=""
+                                class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                    </div>
+                </div>
+                <!-- end client item -->
+                <!-- start client item -->
+                <div class="col text-center mb-35px"
+                    data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="client-box">
+                        <a href="#"><img src="images/client-4.png" alt=""
+                                class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                    </div>
+                </div>
+                <!-- end client item -->
+                <!-- start client item -->
+                <div class="col text-center sm-mb-35px"
+                    data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 700, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="client-box">
+                        <a href="#"><img src="images/client-5.png" alt=""
+                                class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                    </div>
+                </div>
+                <!-- end client item -->
+                <!-- start client item -->
+                <div class="col text-center sm-mb-35px"
+                    data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay":1200, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="client-box">
+                        <a href="#"><img src="images/client-6.png" alt=""
+                                class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                    </div>
+                </div>
+                <!-- end client item -->
+                <!-- start client item -->
+                <div class="col text-center"
+                    data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 800, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="client-box">
+                        <a href="#"><img src="images/client-7.png" alt=""
+                                class="box-shadow-extra-large border-radius-100px lg-w-80 md-w-95 xs-w-auto"></a>
+                    </div>
+                </div>
+                <!-- end client item -->
+            </div>
+            <div class="row justify-content-center mt-7 mb-9 sm-mt-40px sm-mb-0">
+                <div
+                    class="col-12 d-block d-sm-flex align-items-center text-center text-sm-start justify-content-center fs-22 alt-font">
+                    <div class="me-5px xs-ms-10px d-inline-block align-middle"><i
+                            class="fa-regular fa-heart text-red"></i></div>
+                    <div class="d-inline-block align-middle">Join the <span
+                            class="fw-800 text-dark-gray text-decoration-line-bottom-medium">10000+</span> families who
+                        trust Tumy for support and resources.</div>
+                </div>
+            </div>
+        </div>
+        <div class="background-position-center-bottom background-size-100 background-no-repeat h-300px sm-h-150px position-absolute sm-position-relative left-0px bottom-0 w-100 d-none d-md-block"
+            style="background-image: url('images/tumy-analysis-bg.png')"></div>
+    </section>
+    <!-- end section -->
+
+
+
+
+    <!-- start section -->
+    <section class="p-0 sm-pt-50px" id="contactSection">
+        <div class="container overlap-section">
+            <div class="row justify-content-center box-shadow-quadruple-large border-radius-6px overflow-hidden g-0">
+                <!-- start contact address -->
+                <div class="col-lg-6">
+                    <div class="p-15 lg-p-13 md-p-10 bg-white h-100 background-position-right-bottom background-no-repeat xs-background-image-none"
+                        style="background-image: url('images/tumy-contact.jpg')">
+                        <span
+                            class="ps-25px pe-25px mb-25px text-uppercase text-dark-gray fs-13 lh-42 ls-1px alt-font fw-700 border-radius-4px bg-gradient-chablis-red-quartz-white d-inline-block">Keep
+                            in touch</span>
+                        <h3 class="alt-font text-dark-gray fw-600">Looking for help? We're here for you!</h3>
+                        <div class="mt-11">
+                            <!-- <div class="col icon-with-text-style-08 mb-25px">
+                                <div
+                                    class="feature-box feature-box-left-icon-middle border-bottom pb-25px border-color-extra-medium-gray">
+                                    <div class="feature-box-icon me-25px xs-me-15px lh-0px">
+                                        <i class="bi bi-telephone-outbound icon-medium text-dark-gray"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="alt-font fs-18 fw-500">Feel free to reach out?</span>
+                                        <span class="d-block fw-600 alt-font fs-20"><a href="tel:1234567890"
+                                                class="text-dark-gray">123 456 7890</a></span>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="col icon-with-text-style-08 mb-25px">
+                                <div
+                                    class="feature-box feature-box-left-icon-middle border-bottom pb-25px border-color-extra-medium-gray">
+                                    <div class="feature-box-icon me-25px xs-me-15px lh-0px">
+                                        <i class="bi bi-envelope icon-medium text-dark-gray"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="alt-font fs-18 fw-500">How can we assist you?</span>
+                                        <span class="d-block fw-600 alt-font fs-20"><a href="mailto:support@tumy.app"
+                                                class="text-dark-gray">jing@tumy.app</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col icon-with-text-style-08">
+                                <div class="feature-box feature-box-left-icon-middle">
+                                    <div class="feature-box-icon me-25px xs-me-15px lh-0px">
+                                        <i class="bi bi-chat-text icon-medium text-dark-gray"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="alt-font fs-18 fw-500">Ready to chat?</span>
+                                        <span class="text-dark-gray d-block alt-font fw-600 fs-20">115 Broadway, 5th floor, New York, NY 10006</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end contact address -->
+                <div class="col-lg-6 contact-form-style-03">
+                    <div class="p-15 lg-p-13 md-p-10 bg-dark-gray h-100">
+                        <h1 class="fw-600 alt-font text-white fancy-text-style-4 ls-minus-1px">Say
+                            <span data-fancy-text='{ "effect": "rotate", "string": ["hello!", "hi!", "hey!"] }'></span>
+                        </h1>
+                        <!-- start contact form -->
+                        <form action="https://script.google.com/macros/s/AKfycbykQbROMAKEv2WiQ4Kzi4oc7dKEnZ4Twlhun5ij7uSg5aiZ_H0CB5CkzNc9J1sWH-i7/exec" method="post">
+                            <div class="position-relative form-group mb-20px">
+                                <span class="form-icon"><i class="bi bi-person icon-extra-medium"></i></span>
+                                <input
+                                    class="ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required"
+                                    type="text" name="name" placeholder="Enter your name*">
+                            </div>
+                            <div class="position-relative form-group mb-20px">
+                                <span class="form-icon"><i class="bi bi-envelope icon-extra-medium"></i></span>
+                                <input
+                                    class="ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required"
+                                    type="email" name="email" placeholder="Enter your email address*">
+                            </div>
+                            <div class="position-relative form-group form-textarea mt-15px mb-25px">
+                                <textarea
+                                    class="ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control"
+                                    name="comment" placeholder="Enter your message" rows="4"></textarea>
+                                <span class="form-icon"><i class="bi bi-chat-square-dots icon-extra-medium"></i></span>
+                                <input type="hidden" name="redirect" value="">
+                                <button
+                                    class="btn btn-small btn-gradient-orange-sky-blue ls-1px mt-30px submit w-100 btn-round-edge-small"
+                                    type="submit">Send message</button>
+                                <div class="form-results mt-20px d-none"></div>
+                            </div>
+                            <span class="text-white opacity-3 fs-14 lh-22 d-block">I accept the terms & conditions and
+                                understand that my data will be held securely in accordance with the privacy
+                                policy.</span>
+                        </form>
+                        <!-- end contact form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
+    <div id="loading-overlay">Loading...</div>
+    <div id="success-popup">
+        <h2>Thank you for subscribing!</h2>
+        <p>We'll keep you posted with early access and exciting news.</p>
+        <button onclick="closeSuccessPopup()">Close</button>
+      </div>
+    <script>
+        const form = document.getElementById('subscribe-form');
+        const emailInput = form.querySelector('input[name="email"]');
+        const formResults = document.getElementById('form-results');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const successPopup = document.getElementById('success-popup');
+    
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          formResults.classList.add('d-none');
+          const submitButton = form.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+          loadingOverlay.style.display = 'flex';
+          const email = emailInput.value;
+    
+          if (!validateEmail(email)) {
+            formResults.textContent = 'Please enter a valid email address.';
+            formResults.classList.remove('d-none');
+            formResults.classList.add('text-red-500');
+            submitButton.disabled = false;
+            loadingOverlay.style.display = 'none';
+            return;
+          }
+    
+          const endpoint = form.action;
+          const data = new URLSearchParams();
+          data.append('email', email);
+    
+          try {
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              body: data,
+            });
+    
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+    
+            const result = await response.json();
+            console.log(result);
+            emailInput.value = '';
+            formResults.textContent = 'Thank you for subscribing!';
+            formResults.classList.remove('d-none');
+            formResults.classList.add('text-green-500');
+            showSuccessPopup();
+          } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+            formResults.textContent = 'An error occurred. Please try again later.';
+            formResults.classList.remove('d-none');
+            formResults.classList.add('text-red-500');
+          } finally {
+            submitButton.disabled = false;
+            loadingOverlay.style.display = 'none';
+          }
+        });
+    
+        function validateEmail(email) {
+          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return regex.test(email);
+        }
+    
+        function showSuccessPopup() {
+          successPopup.style.display = 'block';
+        }
+    
+        function closeSuccessPopup() {
+          successPopup.style.display = 'none';
+        }
+    
+        function closePopup() {
+          document.getElementById('subscribe-popup').classList.add('mfp-hide');
+        }
+      </script>
+    <!-- start subscription popup -->
+    <div id="subscribe-popup" class="mfp-hide subscribe-popup">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-md-10 bg-white">
+                    <div class="row position-relative box-shadow-quadruple-large">
+                        <div class="col-lg-6 cover-background md-h-400px xs-h-300px"
+                            style="background-image:url('images/tumy-logo.png');"></div>
+                        <div class="col-lg-6 newsletter-popup p-8 pt-10 pb-10 lg-p-5 md-p-6 xs-p-8 position-relative">
+                            <h4 class="d-inline-block alt-font fw-700 text-dark-gray mb-15px">Join our waitlist!</h4>
+                       
+                            <div class="d-inline-block w-100 newsletter-style-05 position-relative mb-20px">
+                                <form action="https://script.google.com/macros/s/AKfycbykQbROMAKEv2WiQ4Kzi4oc7dKEnZ4Twlhun5ij7uSg5aiZ_H0CB5CkzNc9J1sWH-i7/exec" method="post">
+                                    <input class="input-medium w-100 border-radius-4px form-control required mb-15px"
+                                        type="email" name="email" placeholder="Enter your email address" />
+                                    <input type="hidden" name="redirect" value="">
+                                    <button type="submit"
+                                        class="btn btn-medium btn-round-edge btn-dark-gray btn-box-shadow w-100 submit">Get early access!</button>
+                                    <div
+                                        class="form-results border-radius-4px mt-10px lh-normal pt-10px pb-10px ps-15px pe-15px fs-16 w-100 text-center position-absolute z-index-1 d-none">
+                                    </div>
+                                </form>
+                            </div>
+                            <label for="newsletter-off" class="fs-15"><input
+                                    class="w-auto me-10px position-relative top-1px p-0" type="checkbox"
+                                    id="newsletter-off" name="newsletter-off">Don't show this popup again</label>
+                        </div>
+                        <button title="Close (Esc)" type="button" class="mfp-close text-dark-gray"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end subscription popup -->
+    <!-- start footer -->
+    <footer class="footer-light half-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- start footer column -->
+                <div class="col-12 col-md-auto sm-mb-15px text-center text-md-start">
+                    <a href="index.html" class="footer-logo"><img src="images/tumy-logo.png"
+                            data-at2x="images/tumy-logo@2x.png" alt="" style="width: 150px; height: 130px;"></a>
+                </div>
+                <!-- end footer column -->
+                <!-- start footer column -->
+                <div class="col">
+                    <!-- <ul class="footer-navbar fs-18 alt-font text-end fw-600 text-center text-md-end sm-lh-24">
+                        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#keyfeature" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="#testimonial" class="nav-link">Testimonials</a></li>
+                  
+                        <li class="nav-item"><a href="#contactSection" class="nav-link">Contact</a></li>
+                    </ul> -->
+                </div>
+                <!-- end footer column -->
+            </div>
+            <div class="row justify-content-center align-items-center pt-40px sm-pt-30px">
+                <!-- start footer divider -->
+                <div class="col-12 mb-40px sm-mb-30px">
+                    <div class="divider-style-03 divider-style-03-01 border-color-transparent-dark-very-light"></div>
+                </div>
+                <!-- end footer divider -->
+                <!-- start footer column -->
+                <div
+                    class="col-lg-7 col-md-8 fs-14 lh-24 text-center text-md-start last-paragraph-no-margin sm-mb-20px">
+                    <p>This site is protected by reCAPTCHA and the Google <a href="#"
+                            class="text-decoration-line-bottom">privacy policy</a> and <a href="#"
+                            class="text-decoration-line-bottom">terms of service</a> apply. You must not use this
+                        website if you disagree with any of these website standard terms and conditions.</p>
+                </div>
+                <!-- end footer column -->
+                <!-- start footer column -->
+                <div class="col-lg-5 col-md-4 text-end elements-social social-icon-style-08 text-center text-md-end">
+                    <ul class="medium-icon dark d-inline-block">
+                        <li class="mb-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="mb-0"><a class="instagram" href="http://www.instagram.com" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li class="mb-0"><a class="twitter" href="http://www.twitter.com" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a></li>
+                        <li class="mb-0"><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i
+                                    class="fa-brands fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                <!-- end footer column -->
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- start scroll progress -->
+    <div class="scroll-progress d-none d-xxl-block">
+        <a href="#" class="scroll-top" aria-label="scroll">
+            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+        </a>
+    </div>
+    <!-- end scroll progress -->
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
